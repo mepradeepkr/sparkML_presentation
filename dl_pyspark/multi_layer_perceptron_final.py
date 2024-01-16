@@ -22,7 +22,7 @@ spark = SparkSession.builder.appName('deep_learning').getOrCreate()
 
 
 # Load data from a CSV file into a Spark DataFrame
-data = spark.read.csv('dl_data.csv', header=True, inferSchema=True)
+data = spark.read.csv('data/dl_data.csv', header=True, inferSchema=True)
 
 # Display the schema of the DataFrame
 data.printSchema()
