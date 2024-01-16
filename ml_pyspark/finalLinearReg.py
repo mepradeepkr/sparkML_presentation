@@ -16,7 +16,7 @@ sc = SparkContext(conf=conf)
 spark = SparkSession.builder.appName("Spark ML Algo").getOrCreate()
 
 # Load the dataset from a CSV file
-dataframe = spark.read.csv("Admission_Prediction.csv", header=True)
+dataframe = spark.read.csv("data/Admission_Prediction.csv", header=True)
 
 # Convert all columns to the "float" data type
 new_dataframe = dataframe.select(*(col(c).cast("float").alias(c) for c in dataframe.columns))
